@@ -7,5 +7,17 @@ public class Visitante extends Persona{
       this.altura = altura;
       this.dineroDisponible = dinero;
    }
+
+   public void IngresarAlParque(Parque parque){
+      parque.IngresarVisitante(this);
+   }
+
+   public boolean VerificarSaldo(int costoEntrada){
+      return (this.dineroDisponible > costoEntrada);
+   }
+
+   public void PagarBoleto(int costoEntrada){
+      this.dineroDisponible -= costoEntrada;
+   }
    
 }
